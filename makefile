@@ -6,6 +6,13 @@ BIN_DIR = $(OUT_DIR)/bin
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c) 
 OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
 
+.DEFAULT_GOAL := all
+
+
+clean: $(OUT_DIR)
+	@echo Borrado binarios.
+	@rm -r $(OUT_DIR)
+
 all: $(OBJ_FILES)
 	@echo Enlanzando el binario final
 	@mkdir -p $(BIN_DIR)
