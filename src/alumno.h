@@ -28,64 +28,55 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+#ifndef ALUMNO_H   /*! @cond    */
+#define ALUMNO_H   /*! @endcond */
+
+/** @file alumno.h
  **
- ** @brief Programa Principal del TP2
+ ** @brief Cabecera fuente de las funciones de alumno 
  **
+ ** Plantilla para los archivos de cabeceras de las prácticos de las 
+ ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
+ ** de Tiempo Real dictadas en de la Especialización en Integración de
+ ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.09.10 | lcondori    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantillas de Archivos
- ** @brief Plantillas de archivos normalizadas
+ ** @defgroup alumnos Plantillas de Archivos
+ ** @brief alumno de archivos normalizadas
  ** @{ 
  */
 
-/* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include "alumno.h"
-#include <stdio.h>
-/* === Definicion y Macros privados ======================================== */
+/* === Inclusiones de archivos externos ==================================== */
 
-/* === Declaraciones de tipos de datos privados ============================ */
+/* === Cabecera C++ ======================================================== */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-/* === Definiciones de variables privadas ================================== */
+/* === Definicion y Macros publicos ======================================== */
 
-/* === Definiciones de variables publicas ================================== */
+/* == Declaraciones de tipos de datos publicos ============================= */
+typedef struct alumno_s {
+    char apellido[64];
+    char nombre[64];
+    char documento[16];
 
-/* === Declaraciones de funciones privadas ================================= */
+} * alumno_t;
 
-/* === Definiciones de funciones privadas ================================== */
+/* === Declaraciones de variables publicas ================================= */
+void nombre(const struct alumno_s * alumno);
 
-/* === Definiciones de funciones publicas ================================== */
-int main(void) {
-	static const struct alumno_s alumno[3] ={
-		{
-		.apellido = "CONDORI",
-		.nombre = "Lino",
-		.documento = "34.524.256"
-	},
-	{
-		.apellido = "Cerati",
-		.nombre = "Gustavo Adrian",
-		.documento = "99.999.99"
-	},
-	{
-		.apellido = "Perez",
-		.nombre = "Rene",
-		.documento = "49.449.49"
-	}
-	};
-	//static const alumno_t abanderado = &alumno[1];
-	static const struct alumno_s * abanderado = &alumno[1];
-	const alumno_t abanderado2 = &alumno[2];
-	nombre(&alumno[0]);
-	nombre(abanderado);
-	nombre(abanderado2);
-	return 0;
-}
+/* === Declaraciones de funciones publicas ================================= */
+
+
 /* === Ciere de documentacion ============================================== */
+#ifdef __cplusplus
+}
+#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
+#endif   /* MAIN_H */

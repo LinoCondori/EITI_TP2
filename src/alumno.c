@@ -28,10 +28,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+/** @file alumno.c
  **
- ** @brief Programa Principal del TP2
+ ** @brief archivo fuente de las funciones de alumno 
  **
+ ** Plantilla para los archivos de codigo fuente de prácticos de las 
+ ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
+ ** de Tiempo Real dictadas en de la Especialización en Integración de
+ ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
@@ -43,7 +47,6 @@
  */
 
 /* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
 #include "alumno.h"
 #include <stdio.h>
 /* === Definicion y Macros privados ======================================== */
@@ -59,32 +62,17 @@
 /* === Definiciones de funciones privadas ================================== */
 
 /* === Definiciones de funciones publicas ================================== */
-int main(void) {
-	static const struct alumno_s alumno[3] ={
-		{
-		.apellido = "CONDORI",
-		.nombre = "Lino",
-		.documento = "34.524.256"
-	},
-	{
-		.apellido = "Cerati",
-		.nombre = "Gustavo Adrian",
-		.documento = "99.999.99"
-	},
-	{
-		.apellido = "Perez",
-		.nombre = "Rene",
-		.documento = "49.449.49"
-	}
-	};
-	//static const alumno_t abanderado = &alumno[1];
-	static const struct alumno_s * abanderado = &alumno[1];
-	const alumno_t abanderado2 = &alumno[2];
-	nombre(&alumno[0]);
-	nombre(abanderado);
-	nombre(abanderado2);
-	return 0;
-}
+
+void nombre(const struct alumno_s * alumno)
+{
+	printf("Apellido del Alumno: %s \r\n", alumno->apellido);
+	printf("Nombre del Alumno: %s\r\n", alumno->nombre);
+	printf("DNI del Alumno: %s \r\n", alumno->documento);
+
+
+
+};
+
 /* === Ciere de documentacion ============================================== */
 
 /** @} Final de la definición del modulo para doxygen */
