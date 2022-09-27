@@ -39,8 +39,8 @@
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.09.10 | lcondori    | Version inicial del archivo             |
  **  
- ** @defgroup plantilla Plantilals de Archivos
- ** @brief Plantillas de archivos normalizadas
+ ** @defgroup plantilla Plantillas de archivos de main
+ ** @brief Plantillas de archivos normalizadas de main
  ** @{ 
  */
 
@@ -58,6 +58,14 @@ extern "C" {
 /* === Declaraciones de variables publicas ================================= */
 
 /* === Declaraciones de funciones publicas ================================= */
+
+/**
+ * @brief Funcion principal
+ * 
+ * Esta funcion declara y carga los alumnos en un array especial para tal fin.
+ * Ademas muestra lo anteriormente cargado usando la funcion nombre
+ * @return int la funcion devuelve 0 cuando termina
+ */
 int main(void);
 
 /* === Ciere de documentacion ============================================== */

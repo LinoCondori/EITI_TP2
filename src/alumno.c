@@ -41,8 +41,8 @@
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.09.10 | lcondori    | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla Plantillas de Archivos
- ** @brief Plantillas de archivos normalizadas
+ ** @defgroup plantilla Archivo C de alumno
+ ** @brief Archivo C
  ** @{ 
  */
 
@@ -59,7 +59,20 @@
 
 /* === Declaraciones de funciones privadas ================================= */
 
+/**
+ * @brief Funcion privada del modulo
+ * 
+ * Esta funcion fue creada con el solo objeto de ejemplificar que las funciones
+ * privadas deben ser declaradas y documentadas en el archivo fuente.
+ * 
+ */
+void FuncionPrivada();
+
 /* === Definiciones de funciones privadas ================================== */
+
+void FuncionPrivada(){
+
+}
 
 /* === Definiciones de funciones publicas ================================== */
 
