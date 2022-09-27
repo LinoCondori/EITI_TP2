@@ -65,17 +65,17 @@ int main(void) {
 		.apellido = "CONDORI",
 		.nombre = "Lino",
 		.documento = "34.524.256"
-	},
-	{
+		},
+		{
 		.apellido = "Cerati",
 		.nombre = "Gustavo Adrian",
 		.documento = "99.999.99"
-	},
-	{
+		},
+		{
 		.apellido = "Perez",
 		.nombre = "Rene",
 		.documento = "49.449.49"
-	}
+		}
 	};
 	//static const alumno_t abanderado = &alumno[1];
 	static const struct alumno_s * abanderado = &alumno[1];

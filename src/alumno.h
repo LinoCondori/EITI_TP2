@@ -44,8 +44,8 @@
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.09.10 | lcondori    | Version inicial del archivo             |
  ** 
- ** @defgroup alumnos Plantillas de Archivos
- ** @brief alumno de archivos normalizadas
+ ** @defgroup alumnos Archivo de Cabecera de alumno
+ ** @brief cabereca alumno
  ** @{ 
  */
 
@@ -59,14 +59,24 @@ extern "C" {
 /* === Definicion y Macros publicos ======================================== */
 
 /* == Declaraciones de tipos de datos publicos ============================= */
-typedef struct alumno_s {
-    char apellido[64];
-    char nombre[64];
-    char documento[16];
 
-} * alumno_t;
+//! Estructura que contiene los datos del alumno
+typedef struct alumno_s {
+    char apellido[64];      //!< Cadena de caracteres con el apellido del alumno
+    char nombre[64];        //!< Cadena de caracteres con el nombre del alumno
+    char documento[16];     //!< Cadena de caracteres con el documento del alumno
+} * alumno_t;               //!< alumno_t sinonimo de struct alumno_s.
 
 /* === Declaraciones de variables publicas ================================= */
+
+/**
+ * @brief Funcion para mostrar el nombre del alumno
+ * 
+ * Esta funcion muestra por pantalla los datos del alumno. Debe recibir un 
+ * puntero a una estructura con los datos del alumno que se quiere mostrar.
+ * 
+ * @param alumno Puntero a la estructura con los datos del alumno
+ */
 void nombre(const struct alumno_s * alumno);
 
 /* === Declaraciones de funciones publicas ================================= */
